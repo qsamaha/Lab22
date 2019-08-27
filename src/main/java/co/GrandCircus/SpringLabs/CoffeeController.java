@@ -36,7 +36,7 @@ public class CoffeeController {
 	@RequestMapping("/addToDB")
 	public ModelAndView addToDB(User user) {
 		dao.addToDB(user.getFirstName(), user.getLastName(), user.geteMail(), user.getPassWord(), user.getPhoneNum());
-		return new ModelAndView("HelloPage");
+		return new ModelAndView("redirect:/listItems");
 	}
 	
 	@RequestMapping("/listItems")
